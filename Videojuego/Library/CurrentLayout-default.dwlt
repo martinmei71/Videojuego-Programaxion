@@ -14,21 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: -1912
-    y: 52
-    width: 1517
-    height: 773
-=======
-    x: 0
-    y: 43
-    width: 1920
-    height: 997
->>>>>>> ramaLeo
+    x: -1746
+    y: 169
+    width: 1520
+    height: 775
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 875, y: 542}
+  m_MinSize: {x: 875, y: 392}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 0
 --- !u!114 &2
@@ -50,25 +43,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
-<<<<<<< HEAD
-    width: 1517
-    height: 723
-  m_MinSize: {x: 679, y: 492}
-  m_MaxSize: {x: 14002, y: 14042}
+    width: 1520
+    height: 725
+  m_MinSize: {x: 679, y: 342}
+  m_MaxSize: {x: 12004, y: 8042}
   vertical: 0
-  controlID: 79
-=======
-    width: 1920
-    height: 947
-  m_MinSize: {x: 679, y: 492}
-  m_MaxSize: {x: 14002, y: 14042}
-  vertical: 0
-<<<<<<< Mundo-Martin
-  controlID: 56
-=======
-  controlID: 127
->>>>>>> personaje grande
->>>>>>> ramaLeo
+  controlID: 120
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -84,26 +64,12 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1210
+    x: 1211
     y: 0
-<<<<<<< HEAD
-    width: 307
-    height: 723
+    width: 309
+    height: 725
   m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
-=======
-<<<<<<< Mundo-Martin
-    width: 390
-    height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
-=======
-    width: 391
-    height: 957
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
->>>>>>> personaje grande
->>>>>>> ramaLeo
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -126,24 +92,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< HEAD
     width: 300
-    height: 437
+    height: 438
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
-=======
-<<<<<<< Mundo-Martin
-    width: 379
-    height: 572
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
-=======
-    width: 380
-    height: 577
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
->>>>>>> personaje grande
->>>>>>> ramaLeo
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -159,34 +111,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
-<<<<<<< HEAD
-    y: 437
-    width: 1210
-    height: 286
-=======
-<<<<<<< Mundo-Martin
-    y: 572
-    width: 1530
-    height: 375
-=======
-    y: 577
-    width: 1529
-    height: 380
->>>>>>> personaje grande
->>>>>>> ramaLeo
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 13}
+    y: 438
+    width: 1211
+    height: 287
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 13}
   - {fileID: 18}
-  m_Selected: 0
+  m_Selected: 1
   m_LastSelected: 0
 --- !u!114 &6
 MonoBehaviour:
@@ -208,14 +148,9 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< HEAD
-    width: 1517
-    height: 773
-=======
-    width: 1920
-    height: 997
->>>>>>> ramaLeo
-  m_MinSize: {x: 875, y: 300}
+    width: 1520
+    height: 775
+  m_MinSize: {x: 875, y: 392}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &7
 MonoBehaviour:
@@ -234,7 +169,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1517
+    width: 1520
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -255,13 +190,8 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-<<<<<<< HEAD
-    y: 753
-    width: 1517
-=======
-    y: 977
-    width: 1920
->>>>>>> ramaLeo
+    y: 755
+    width: 1520
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -284,30 +214,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< HEAD
-    width: 1210
-    height: 723
-  m_MinSize: {x: 403, y: 492}
-  m_MaxSize: {x: 10001, y: 14042}
+    width: 1211
+    height: 725
+  m_MinSize: {x: 403, y: 342}
+  m_MaxSize: {x: 8003, y: 8042}
   vertical: 1
   controlID: 80
-=======
-<<<<<<< Mundo-Martin
-    width: 1530
-    height: 947
-  m_MinSize: {x: 403, y: 492}
-  m_MaxSize: {x: 10001, y: 14042}
-  vertical: 1
-  controlID: 57
-=======
-    width: 1529
-    height: 957
-  m_MinSize: {x: 403, y: 492}
-  m_MaxSize: {x: 10001, y: 14042}
-  vertical: 1
-  controlID: 59
->>>>>>> personaje grande
->>>>>>> ramaLeo
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -327,30 +239,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< HEAD
-    width: 1210
-    height: 437
+    width: 1211
+    height: 438
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 37
-=======
-<<<<<<< Mundo-Martin
-    width: 1530
-    height: 572
-  m_MinSize: {x: 403, y: 221}
-  m_MaxSize: {x: 8003, y: 4021}
-  vertical: 0
-  controlID: 58
-=======
-    width: 1529
-    height: 577
-  m_MinSize: {x: 403, y: 221}
-  m_MaxSize: {x: 8003, y: 4021}
-  vertical: 0
-  controlID: 60
->>>>>>> personaje grande
->>>>>>> ramaLeo
+  controlID: 55
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -368,18 +262,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 300
     y: 0
-<<<<<<< HEAD
-    width: 910
-    height: 437
-=======
-<<<<<<< Mundo-Martin
-    width: 1151
-    height: 572
-=======
-    width: 1149
-    height: 577
->>>>>>> personaje grande
->>>>>>> ramaLeo
+    width: 911
+    height: 438
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 16}
@@ -410,10 +294,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 379
-    y: 73
-    width: 1149
-    height: 551
+    x: 468
+    y: 181
+    width: 973
+    height: 501
   m_ViewDataDictionary: {fileID: 0}
 --- !u!114 &13
 MonoBehaviour:
@@ -436,24 +320,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: -1912
-    y: 519
-    width: 1209
-    height: 265
-=======
-<<<<<<< Mundo-Martin
-    x: 0
-    y: 645
-    width: 1529
-    height: 354
-=======
-    x: -1920
-    y: 650
-    width: 1528
-    height: 359
->>>>>>> personaje grande
->>>>>>> ramaLeo
+    x: -1746
+    y: 637
+    width: 1210
+    height: 266
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -468,49 +338,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-<<<<<<< HEAD
     - Assets
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
   - Assets
-=======
-<<<<<<< Mundo-Martin
-    - Assets/Sunnyland/artwork/Environment/props
-  m_ViewMode: 1
-  m_StartGridSize: 64
-  m_LastFolders:
-  - Assets/Sunnyland/artwork/Environment/props
-=======
-    - Assets/Hero Knight - Pixel Art
-  m_ViewMode: 1
-  m_StartGridSize: 64
-  m_LastFolders:
-  - Assets/Hero Knight - Pixel Art
->>>>>>> personaje grande
->>>>>>> ramaLeo
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\Usuario\Documents\Programacion\Videojuego-Programaxion\Videojuego
+  m_LastProjectPath: F:\LEO\DAM\2CURSO\Multimedia\2TRIMESTRE\proyecto\Videojuego-Programaxion\Videojuego
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-<<<<<<< Mundo-Martin
-    scrollPos: {x: 0, y: 18}
-    m_SelectedIDs: f6400000
-    m_LastClickedID: 16630
-    m_ExpandedIDs: 00000000f83c0000fa3c0000fc3c0000fe3c0000003d0000023d0000043d0000063d0000083d00000a3d00000c3d00000e3d0000103d0000123d0000143d0000283d000000ca9a3b
-=======
     scrollPos: {x: 0, y: 0}
-<<<<<<< HEAD
     m_SelectedIDs: 44390000
     m_LastClickedID: 14660
     m_ExpandedIDs: 000000004439000046390000483900004a3900004c3900004e39000050390000523900005439000056390000583900005a3900005c3900005e39000060390000
-=======
-    m_SelectedIDs: be3b0000
-    m_LastClickedID: 15294
-    m_ExpandedIDs: 00000000a23b0000a43b0000a63b0000a83b0000aa3b0000ac3b0000ae3b0000b03b0000b23b0000b43b0000b63b0000b83b0000ba3b0000bc3b0000be3b0000
->>>>>>> personaje grande
->>>>>>> ramaLeo
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -538,15 +379,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-<<<<<<< HEAD
     m_ExpandedIDs: 000000004439000046390000483900004a3900004c3900004e39000050390000523900005439000056390000583900005a3900005c3900005e39000060390000
-=======
-<<<<<<< Mundo-Martin
-    m_ExpandedIDs: 00000000f83c0000fa3c0000fc3c0000fe3c0000003d0000023d0000043d0000063d0000083d00000a3d00000c3d00000e3d0000103d0000123d0000143d0000
-=======
-    m_ExpandedIDs: 00000000a23b0000a43b0000a63b0000a83b0000aa3b0000ac3b0000ae3b0000b03b0000b23b0000b43b0000b63b0000b83b0000ba3b0000bc3b0000be3b0000
->>>>>>> personaje grande
->>>>>>> ramaLeo
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -573,13 +406,8 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-<<<<<<< Mundo-Martin
-    m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c623000000000000
-=======
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
->>>>>>> personaje grande
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -628,24 +456,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: -702
-    y: 82
-    width: 306
-    height: 702
-=======
-<<<<<<< Mundo-Martin
-    x: 1530
-    y: 73
-    width: 389
-    height: 926
-=======
-    x: -391
-    y: 73
-    width: 390
-    height: 936
->>>>>>> personaje grande
->>>>>>> ramaLeo
+    x: -535
+    y: 199
+    width: 308
+    height: 704
   m_ViewDataDictionary: {fileID: 0}
   m_OpenAddComponentMenu: 0
   m_ObjectsLockedBeforeSerialization: []
@@ -680,39 +494,17 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: -1912
-    y: 82
+    x: -1746
+    y: 199
     width: 299
-    height: 416
-=======
-    x: 0
-    y: 73
-<<<<<<< Mundo-Martin
-    width: 378
-    height: 551
-=======
-    width: 379
-    height: 556
->>>>>>> personaje grande
->>>>>>> ramaLeo
+    height: 417
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-<<<<<<< Mundo-Martin
       m_SelectedIDs: 
       m_LastClickedID: 0
-<<<<<<< HEAD
       m_ExpandedIDs: 64fbffff
-=======
-      m_ExpandedIDs: 18f5ffff
-=======
-      m_SelectedIDs: 2efbffff
-      m_LastClickedID: -1234
-      m_ExpandedIDs: 64fbffff5c390000603900006c390000
->>>>>>> personaje grande
->>>>>>> ramaLeo
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -735,7 +527,7 @@ MonoBehaviour:
     m_LockTracker:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
-  m_WindowGUID: a24edbd2ccd83bd47b5e6321f2b2c686
+  m_WindowGUID: 793c7608261503c4dbcc0a364d66ecaa
 --- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -757,27 +549,13 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: -1612
-    y: 82
-    width: 908
-    height: 416
-=======
-<<<<<<< Mundo-Martin
-    x: 379
-    y: 73
-    width: 1149
-    height: 551
-=======
-    x: -1540
-    y: 73
-    width: 1147
-    height: 556
->>>>>>> personaje grande
->>>>>>> ramaLeo
+    x: -1446
+    y: 199
+    width: 909
+    height: 417
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
-  m_WindowGUID: 8071032e45ff9f14384d4450f86d685c
+  m_WindowGUID: 0b53f5d17d9f36b43a536c6c60b9b299
   m_Gizmos: 1
   m_SceneIsLit: 1
   m_SceneLighting: 1
@@ -786,21 +564,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-<<<<<<< HEAD
     m_Target: {x: 0, y: 0, z: 0}
     speed: 2
     m_Value: {x: 0, y: 0, z: 0}
-=======
-<<<<<<< Mundo-Martin
-    m_Target: {x: -0.36163244, y: -0.7091536, z: -2.3458953}
-    speed: 2
-    m_Value: {x: -0.34326664, y: -0.7102091, z: -2.34144}
-=======
-    m_Target: {x: 0.012018442, y: -0.00000011920929, z: 0}
-    speed: 2
-    m_Value: {x: 0.012018442, y: -0.00000011920929, z: 0}
->>>>>>> personaje grande
->>>>>>> ramaLeo
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -812,7 +578,7 @@ MonoBehaviour:
   m_ExposureSliderMax: 10
   m_SceneViewState:
     showFog: 1
-    showMaterialUpdate: 1
+    showMaterialUpdate: 0
     showSkybox: 1
     showFlares: 1
     showImageEffects: 1
@@ -850,21 +616,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-<<<<<<< HEAD
     m_Target: 10
     speed: 2
     m_Value: 10
-=======
-<<<<<<< Mundo-Martin
-    m_Target: 1.1827302
-    speed: 2
-    m_Value: 1.2384609
-=======
-    m_Target: 3.1676369
-    speed: 2
-    m_Value: 3.1676369
->>>>>>> personaje grande
->>>>>>> ramaLeo
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -910,24 +664,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
     x: 507
     y: 94
     width: 1532
     height: 790
-=======
-<<<<<<< Mundo-Martin
-    x: 379
-    y: 73
-    width: 1149
-    height: 551
-=======
-    x: -1540
-    y: 73
-    width: 1147
-    height: 556
->>>>>>> personaje grande
->>>>>>> ramaLeo
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewNames: []
   m_SerializedViewValues: []
@@ -937,15 +677,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-<<<<<<< HEAD
   m_TargetSize: {x: 1532, y: 769}
-=======
-<<<<<<< Mundo-Martin
-  m_TargetSize: {x: 1149, y: 530}
-=======
-  m_TargetSize: {x: 1147, y: 535}
->>>>>>> personaje grande
->>>>>>> ramaLeo
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 0
@@ -960,24 +692,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-<<<<<<< HEAD
     m_HBaseRangeMin: -766
     m_HBaseRangeMax: 766
-    m_VBaseRangeMin: -395
-    m_VBaseRangeMax: 395
-=======
-<<<<<<< Mundo-Martin
-    m_HBaseRangeMin: -574.5
-    m_HBaseRangeMax: 574.5
-    m_VBaseRangeMin: -265
-    m_VBaseRangeMax: 265
-=======
-    m_HBaseRangeMin: -573.5
-    m_HBaseRangeMax: 573.5
-    m_VBaseRangeMin: -267.5
-    m_VBaseRangeMax: 267.5
->>>>>>> personaje grande
->>>>>>> ramaLeo
+    m_VBaseRangeMin: -384.5
+    m_VBaseRangeMax: 384.5
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -994,59 +712,24 @@ MonoBehaviour:
     m_DrawArea:
       serializedVersion: 2
       x: 0
-<<<<<<< HEAD
-      y: 0
-      width: 1532
-      height: 790
-    m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 766, y: 395}
-=======
       y: 21
-<<<<<<< Mundo-Martin
-      width: 1149
-      height: 530
+      width: 1532
+      height: 769
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 574.5, y: 265}
-=======
-      width: 1147
-      height: 535
-    m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 573.5, y: 267.5}
->>>>>>> personaje grande
->>>>>>> ramaLeo
+    m_Translation: {x: 766, y: 384.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-<<<<<<< HEAD
       x: -766
-      y: -395
+      y: -384.5
       width: 1532
-      height: 790
+      height: 769
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 1532, y: 790}
-=======
-<<<<<<< Mundo-Martin
-      x: -574.5
-      y: -265
-      width: 1149
-      height: 530
-    m_MinimalGUI: 1
-  m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1149, y: 551}
-=======
-      x: -573.5
-      y: -267.5
-      width: 1147
-      height: 535
-    m_MinimalGUI: 1
-  m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1147, y: 556}
->>>>>>> personaje grande
->>>>>>> ramaLeo
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -1073,8 +756,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 8
-    y: 718
-    width: 1366
-    height: 308
+    x: -1746
+    y: 637
+    width: 1210
+    height: 266
   m_ViewDataDictionary: {fileID: 0}
