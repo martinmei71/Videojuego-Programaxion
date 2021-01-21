@@ -1,1 +1,5 @@
+<<<<<<< Mundo-Martin
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":true,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":true,"pivot":{"x":-0.36163243651390078,"y":-0.7091535925865173,"z":-2.345895290374756},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":1.1827301979064942,"orthographic":true}
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":true,"pivot":{"x":0.012018442153930664,"y":-1.1920928955078126e-7,"z":0.0},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":3.1676368713378908,"orthographic":true}
+>>>>>>> personaje grande
