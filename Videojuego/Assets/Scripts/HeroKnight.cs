@@ -3,9 +3,9 @@ using System.Collections;
 
 public class HeroKnight : MonoBehaviour {
 
-    [SerializeField] float      m_speed = 4.0f;
-    [SerializeField] float      m_jumpForce = 7.5f;
-    [SerializeField] float      m_rollForce = 6.0f;
+    [SerializeField] float      m_speed = 2.0f;
+    [SerializeField] float      m_jumpForce = 5.0f;
+    [SerializeField] float      m_rollForce = 3.0f;
     [SerializeField] bool       m_noBlood = false;
     [SerializeField] GameObject m_slideDust;
 
@@ -21,6 +21,8 @@ public class HeroKnight : MonoBehaviour {
     private int                 m_facingDirection = 1;
     private int                 m_currentAttack = 0;
     private float               m_timeSinceAttack = 0.0f;
+    private float               m_timeSinceBlock = 0.0f;
+
     private float               m_delayToIdle = 0.0f;
 
 
@@ -41,6 +43,7 @@ public class HeroKnight : MonoBehaviour {
     {
         // Increase timer that controls attack combo
         m_timeSinceAttack += Time.deltaTime;
+        m_timeSinceBlock += Time.deltaTime;
 
         //Check if character just landed on the ground
         if (!m_grounded && m_groundSensor.State())
@@ -83,19 +86,25 @@ public class HeroKnight : MonoBehaviour {
         //Wall Slide
         m_animator.SetBool("WallSlide", (m_wallSensorR1.State() && m_wallSensorR2.State()) || (m_wallSensorL1.State() && m_wallSensorL2.State()));
 
+
+
+        //MUERTE---------------------------------------------------------------------
         //Death
         if (Input.GetKeyDown("e"))
         {
             m_animator.SetBool("noBlood", m_noBlood);
             m_animator.SetTrigger("Death");
         }
-            
-        //Hurt
+        //HERIDA---------------------------------------------------------------------
+                //Hurt
         else if (Input.GetKeyDown("q"))
             m_animator.SetTrigger("Hurt");
 
+
+
+
         //Attack
-        else if(Input.GetMouseButtonDown(0) && m_timeSinceAttack > 0.25f)
+        else if(Input.GetKeyDown("up") && m_timeSinceAttack > 0.25f)
         {
             m_currentAttack++;
 
@@ -115,10 +124,10 @@ public class HeroKnight : MonoBehaviour {
         }
 
         // Block
-        else if (Input.GetMouseButtonDown(1))
+        else if (Input.GetKeyDown("down") && m_timeSinceBlock > 0.25f)
         {
             m_animator.SetTrigger("Block");
-            m_animator.SetBool("IdleBlock", true);
+            m_timeSinceBlock = 0.0f;
         }
 
         else if (Input.GetMouseButtonUp(1))
