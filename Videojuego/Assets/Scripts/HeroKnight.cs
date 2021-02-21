@@ -170,6 +170,18 @@ public class HeroKnight : MonoBehaviour {
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+
+        }
+    }
+
+
+
+
+
     // Animation Events
     // Called in end of roll animation.
     void AE_ResetRoll()
