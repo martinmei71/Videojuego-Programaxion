@@ -65,12 +65,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\CameraFollow.cs" />
+    <Compile Include="Assets\ControladorColoso.cs" />
     <Compile Include="Assets\Enemies\Scripts\controlador_enemigo_lento.cs" />
     <Compile Include="Assets\Hero Knight - Pixel Art\ColorSwap\ColorSwap_HeroKnight.cs" />
     <Compile Include="Assets\Scripts\DestroyEvent_HeroKnight.cs" />
     <Compile Include="Assets\Scripts\HeroKnight.cs" />
     <Compile Include="Assets\Scripts\Sensor_HeroKnight.cs" />
     <Compile Include="Assets\generadorEnemigosControler.cs" />
+    <Compile Include="Assets\rango_movimiento.cs" />
     <None Include="Assets\Enemies\license.txt" />
     <None Include="Assets\Hero Knight - Pixel Art\ColorSwap\Sprites-ColorSwap.shader" />
     <Reference Include="UnityEngine">
