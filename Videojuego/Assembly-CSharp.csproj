@@ -68,7 +68,9 @@
     <Compile Include="Assets\Hero Knight - Pixel Art\ColorSwap\ColorSwap_HeroKnight.cs" />
     <Compile Include="Assets\RangoMovimiento.cs" />
     <Compile Include="Assets\Scripts\DestroyEvent_HeroKnight.cs" />
+    <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\HeroKnight.cs" />
+    <Compile Include="Assets\Scripts\PlayerRespawn.cs" />
     <Compile Include="Assets\Scripts\Sensor_HeroKnight.cs" />
     <None Include="Assets\Pixel2DCastleTileset\about.txt" />
     <None Include="Assets\Hero and Opponents\license.txt" />
