@@ -96,25 +96,19 @@ public class HeroKnight : MonoBehaviour {
 
 
         //Attack
-        else if((Input.GetKeyDown("up")|| Input.GetKeyDown("w")) && m_timeSinceAttack > 0.25f)
+        //TIEMPO QUE TARDA EN ATACAR 0.4
+        else if ((Input.GetKeyDown("up") || Input.GetKeyDown("w")) && m_timeSinceAttack > 0.40f)
         {
-            m_currentAttack++;
 
-            // Loop back to one after third attack
-            if (m_currentAttack > 3)
-                m_currentAttack = 1;
+            m_currentAttack = 1;
 
-            // Reset Attack combo if time since last attack is too large
-            if (m_timeSinceAttack > 1.0f)
-                m_currentAttack = 1;
-
-            // Call one of three attack animations "Attack1", "Attack2", "Attack3"
+            // Call attack animations "Attack1"
             m_animator.SetTrigger("Attack" + m_currentAttack);
 
             // Reset timer
             m_timeSinceAttack = 0.0f;
         }
-            
+
 
         //Jump
         else if (Input.GetKeyDown("space") && m_grounded)
