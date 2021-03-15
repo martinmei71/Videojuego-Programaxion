@@ -5,12 +5,14 @@ using UnityEngine;
 public class ControladorColoso : MonoBehaviour
 {
     public float speed = 1f; // para variar velocidad desde fuera
+    private float velocidadArreglada;
     public Transform target; // se le asocia el target que hemos dibujado
     private Vector3 inicio;
     private Vector3 fin;
     private SpriteRenderer flip; // para detectar cuando dar la vuelta al recorrido
+    private Animator estado;
 
-    private bool enRango = false;
+    //private bool enRango = false;
     private bool muerto = false;
 
 
@@ -21,6 +23,7 @@ public class ControladorColoso : MonoBehaviour
     void Start()
     {
         flip = GetComponent<SpriteRenderer>();
+        estado = GetComponent<Animator>();
         target.parent = null; // desvincula Target de Coloso para que cuando se mueva coloso se mantenga la posición de target.
         inicio = transform.position; //posición incial de coloso.
         fin = target.position; // posición final del recorrido
@@ -33,8 +36,17 @@ public class ControladorColoso : MonoBehaviour
     {
        if(target != null)
         {    //para mover el coloso de un punto a otrole pasamos las varaibles (posción actual de coloso, su targe y la velocidad multiplicada por la velocidad relativa de cada fotograma)
-            transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
-           
+
+            if (estado.GetCurrentAnimatorStateInfo(0).IsName("Coloso_walk"))
+            {
+                velocidadArreglada = speed * Time.deltaTime;
+            } else
+            {
+                velocidadArreglada = 0;
+            }
+      
+           transform.position = Vector3.MoveTowards(transform.position, target.position, velocidadArreglada);
+            
         }
 
        if(transform.position == target.position) // si ya llegó al final del recorrido
@@ -52,7 +64,7 @@ public class ControladorColoso : MonoBehaviour
             flip.flipX = true;
         }
         
-
+       
 
     }
 }
