@@ -82,7 +82,7 @@ public class HeroKnight : MonoBehaviour {
 
         //MUERTE---------------------------------------------------------------------
         //Death
-        if (Input.GetKeyDown("e"))
+        if (Input.GetKeyDown("r"))
         {
           
             m_animator.SetTrigger("Death");
@@ -97,7 +97,7 @@ public class HeroKnight : MonoBehaviour {
 
         //Attack
         //TIEMPO QUE TARDA EN ATACAR 0.4
-        else if ((Input.GetKeyDown("up") || Input.GetKeyDown("w")) && m_timeSinceAttack > 0.40f)
+        else if ((Input.GetKeyDown("up") || Input.GetKeyDown("e")) && m_timeSinceAttack > 0.40f)
         {
 
             m_currentAttack = 1;
@@ -111,7 +111,7 @@ public class HeroKnight : MonoBehaviour {
 
 
         //Jump
-        else if (Input.GetKeyDown("space") && m_grounded)
+        else if ((Input.GetKeyDown("space") || Input.GetKeyDown("w")) && m_grounded)
         {
             m_animator.SetTrigger("Jump");
             m_grounded = false;
