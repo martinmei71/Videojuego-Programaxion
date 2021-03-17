@@ -14,7 +14,8 @@ public class HeroKnight : MonoBehaviour {
     private Sensor_HeroKnight   m_groundSensor;
    
     private bool                m_grounded = false;
-    
+    bool herido = false;
+
     private int                 m_facingDirection = 1;
     private int                 m_currentAttack = 0;
     private float               m_timeSinceAttack = 0.0f;
@@ -61,18 +62,22 @@ public class HeroKnight : MonoBehaviour {
         // Swap direction of sprite depending on walk direction
         if (inputX > 0)
         {
-            GetComponent<SpriteRenderer>().flipX = false;
-            m_facingDirection = 1;
+            transform.localScale = new Vector3(0.3642007f, 0.3642007f, 0.3642007f);
+            // m_facingDirection = 1;
         }
             
         else if (inputX < 0)
         {
-            GetComponent<SpriteRenderer>().flipX = true;
-            m_facingDirection = -1;
+            transform.localScale = new Vector3(-0.3642007f, 0.3642007f, 0.3642007f);
+            //m_facingDirection = -1;
         }
 
         // Move
-        m_body2d.velocity = new Vector2(inputX * m_speed, m_body2d.velocity.y);
+        if (!herido)
+        {
+            m_body2d.velocity = new Vector2(inputX * m_speed, m_body2d.velocity.y);
+
+        }
 
         //Set AirSpeed in animator
         m_animator.SetFloat("AirSpeedY", m_body2d.velocity.y);
@@ -113,11 +118,7 @@ public class HeroKnight : MonoBehaviour {
         //Jump
         else if ((Input.GetKeyDown("space") || Input.GetKeyDown("w")) && m_grounded)
         {
-            m_animator.SetTrigger("Jump");
-            m_grounded = false;
-            m_animator.SetBool("Grounded", m_grounded);
-            m_body2d.velocity = new Vector2(m_body2d.velocity.x, m_jumpForce);
-            m_groundSensor.Disable(0.2f);
+            jump();
         }
 
         //Run
@@ -138,7 +139,39 @@ public class HeroKnight : MonoBehaviour {
         }
     }
 
+    public void jump()
+    {
+        m_animator.SetTrigger("Jump");
+        m_grounded = false;
+        m_animator.SetBool("Grounded", m_grounded);
+        m_body2d.velocity = new Vector2(m_body2d.velocity.x, m_jumpForce);
+        m_groundSensor.Disable(0.2f);
+    }
 
+
+
+    public void Golpeado(float posicionEnemigoX)
+    {
+        bool herido = true;
+        m_animator.SetTrigger("Hurt");
+        float side = Mathf.Sign(posicionEnemigoX - transform.position.x);
+
+
+        //añadir impulso
+        m_body2d.AddForce(Vector2.left*side*30f,ForceMode2D.Impulse);
+        jump();
+        Invoke("trapa", 1);
+
+        
+
+        //RESTAR VIDA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        
+    }
+
+    public void trapa()
+    {
+        herido = false;
+    }
     //metodo para colisiones con enemigos---------------------------------
     private void OnTriggerEnter2D(Collider2D collision)
     {
