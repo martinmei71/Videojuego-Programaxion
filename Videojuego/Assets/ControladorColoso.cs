@@ -12,8 +12,7 @@ public class ControladorColoso : MonoBehaviour
     private SpriteRenderer flip; // para detectar cuando dar la vuelta al recorrido
     private Animator estado;
 
-    //private bool enRango = false;
-    private bool muerto = false;
+    
 
 
 
@@ -27,8 +26,6 @@ public class ControladorColoso : MonoBehaviour
         target.parent = null; // desvincula Target de Coloso para que cuando se mueva coloso se mantenga la posición de target.
         inicio = transform.position; //posición incial de coloso.
         fin = target.position; // posición final del recorrido
-        
-
     }
 
     // Update is called once per frame
@@ -36,17 +33,8 @@ public class ControladorColoso : MonoBehaviour
     {
        if(target != null)
         {    //para mover el coloso de un punto a otrole pasamos las varaibles (posción actual de coloso, su targe y la velocidad multiplicada por la velocidad relativa de cada fotograma)
-
-            if (estado.GetCurrentAnimatorStateInfo(0).IsName("Coloso_walk"))
-            {
-                velocidadArreglada = speed * Time.deltaTime;
-            } else
-            {
-                velocidadArreglada = 0;
-            }
-      
-           transform.position = Vector3.MoveTowards(transform.position, target.position, velocidadArreglada);
-            
+           velocidadArreglada = speed * Time.deltaTime;
+           transform.position = Vector3.MoveTowards(transform.position, target.position, velocidadArreglada);  
         }
 
        if(transform.position == target.position) // si ya llegó al final del recorrido
@@ -57,14 +45,40 @@ public class ControladorColoso : MonoBehaviour
 
        if(target.position.x > transform.position.x) // comprueba si la posición del target está a la dcha o izq de coloso
         {
-            flip.flipX = false;
+            transform.localScale = new Vector3(1f, 1f, 1f);
+            //flip.flipX = false;
 
         }else
         {
-            flip.flipX = true;
+            transform.localScale = new Vector3(-1f, 1f, 1f);
+           // flip.flipX = true;
         }
-        
-       
+
+                 
 
     }
+
+     void OnTriggerEnter2D(Collider2D col)
+    {
+       if(col.gameObject.tag == "Player")
+        {
+            col.SendMessage("Golpeado", transform.position.x);
+        }
+    }
+
+    public void Muerto()
+    {
+        estado.SetTrigger("muerto");
+        speed = 0f;
+        Invoke("DestruirObjeto", 2);
+
+        
+    }
+
+    void DestruirObjeto()
+    {
+        Destroy(gameObject);
+    }
+
+
 }

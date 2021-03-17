@@ -8,21 +8,13 @@ public class ControladorKrakot : MonoBehaviour
     private float velocidadArreglada;
     public Transform target; // se le asocia el target que hemos dibujado
     private Vector3 inicio;
-    private Vector3 fin;
-    private SpriteRenderer flip; // para detectar cuando dar la vuelta al recorrido
+    private Vector3 fin; 
     private Animator estado;
-
-    //private bool enRango = false;
-    private bool muerto = false;
-
-
-
-
 
     // Start is called before the first frame update
     void Start()
     {
-        flip = GetComponent<SpriteRenderer>();
+        
         estado = GetComponent<Animator>();
         target.parent = null; // desvincula Target de Coloso para que cuando se mueva coloso se mantenga la posición de target.
         inicio = transform.position; //posición incial de coloso.
@@ -57,14 +49,40 @@ public class ControladorKrakot : MonoBehaviour
 
        if(target.position.x > transform.position.x) // comprueba si la posición del target está a la dcha o izq de coloso
         {
-            flip.flipX = false;
+            transform.localScale = new Vector3(-1f, 1f, 1f);
+           // flip.flipX = false;
 
         }else
         {
-            flip.flipX = true;
+            transform.localScale = new Vector3(1f, 1f, 1f);
+            //flip.flipX = true;
         }
         
        
 
+    }
+
+
+
+    void OnTriggerEnter2D(Collider2D col)   //HAY QUE MODIFICAR, 2 triggers difrentes ataque y cuerpo 
+    {
+        if (col.gameObject.tag == "Player")
+        {
+            col.SendMessage("Golpeado", transform.position.x);
+        }
+    }
+
+    public void Muerto()
+    {
+        estado.SetTrigger("muerto");
+        speed = 0f;
+        Invoke("DestruirObjeto", 2);
+
+
+    }
+
+    void DestruirObjeto()
+    {
+        Destroy(gameObject);
     }
 }
