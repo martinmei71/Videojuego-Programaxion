@@ -10,12 +10,14 @@ public class ControladorKrakot : MonoBehaviour
     private Vector3 inicio;
     private Vector3 fin; 
     private Animator estado;
+    private BoxCollider2D rangoAtaque;
 
     // Start is called before the first frame update
     void Start()
     {
         
         estado = GetComponent<Animator>();
+        rangoAtaque = GetComponent<BoxCollider2D>();
         target.parent = null; // desvincula Target de Coloso para que cuando se mueva coloso se mantenga la posición de target.
         inicio = transform.position; //posición incial de coloso.
         fin = target.position; // posición final del recorrido
@@ -50,19 +52,24 @@ public class ControladorKrakot : MonoBehaviour
        if(target.position.x > transform.position.x) // comprueba si la posición del target está a la dcha o izq de coloso
         {
             transform.localScale = new Vector3(-1f, 1f, 1f);
-           // flip.flipX = false;
-
-        }else
+          }else
         {
             transform.localScale = new Vector3(1f, 1f, 1f);
-            //flip.flipX = true;
         }
-        
-       
+
+
+        if (estado.GetCurrentAnimatorStateInfo(0).IsName("Krakot_atack"))
+        {
+            rangoAtaque.enabled = true;
+        }
+        else
+        {
+            rangoAtaque.enabled = false;
+
+        }
+
 
     }
-
-
 
     void OnTriggerEnter2D(Collider2D col)   //HAY QUE MODIFICAR, 2 triggers difrentes ataque y cuerpo 
     {
@@ -76,6 +83,7 @@ public class ControladorKrakot : MonoBehaviour
     {
         estado.SetTrigger("muerto");
         speed = 0f;
+        gameObject.layer = 10;
         Invoke("DestruirObjeto", 2);
 
 

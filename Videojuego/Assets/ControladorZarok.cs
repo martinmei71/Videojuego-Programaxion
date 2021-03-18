@@ -10,12 +10,15 @@ public class ControladorZarok : MonoBehaviour
     private Vector3 inicio;
     private Vector3 fin; 
     private Animator estado;
+    private BoxCollider2D rangoAtaque;
+
 
     // Start is called before the first frame update
     void Start()
     {
         
         estado = GetComponent<Animator>();
+        rangoAtaque = GetComponent<BoxCollider2D>();
         target.parent = null; // desvincula Target de Coloso para que cuando se mueva coloso se mantenga la posición de target.
         inicio = transform.position; //posición incial de coloso.
         fin = target.position; // posición final del recorrido
@@ -57,8 +60,19 @@ public class ControladorZarok : MonoBehaviour
             transform.localScale = new Vector3(1f, 1f, 1f);
             //flip.flipX = true;
         }
-        
-       
+
+
+
+       //MIRAR LO DE BOX COLLIDER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
+        if (estado.GetCurrentAnimatorStateInfo(0).IsName("Zarok_atack"))
+        {
+            rangoAtaque.enabled = true;
+        }
+        else
+        {
+            rangoAtaque.enabled = false;
+
+        }
 
     }
 
@@ -76,6 +90,7 @@ public class ControladorZarok : MonoBehaviour
     {
         estado.SetTrigger("muerto");
         speed = 0f;
+        gameObject.layer = 10;
         Invoke("DestruirObjeto", 2);
 
 

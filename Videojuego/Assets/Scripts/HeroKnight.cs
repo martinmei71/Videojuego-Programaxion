@@ -1,4 +1,8 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
+
 using System.Collections;
 
 public class HeroKnight : MonoBehaviour {
@@ -7,8 +11,6 @@ public class HeroKnight : MonoBehaviour {
     public float m_jumpForce = 5.0f;
     public bool m_noBlood = false;
     
-    public GameObject game;
-
     private Animator            m_animator;
     private Rigidbody2D         m_body2d;
     private Sensor_HeroKnight   m_groundSensor;
@@ -22,6 +24,9 @@ public class HeroKnight : MonoBehaviour {
    
 
     private float               m_delayToIdle = 0.0f;
+
+    public Text textoVidas;
+    private int vidas = 3;
 
 
     // Use this for initialization
@@ -152,38 +157,44 @@ public class HeroKnight : MonoBehaviour {
 
     public void Golpeado(float posicionEnemigoX)
     {
-        herido = true;
-        m_animator.SetTrigger("Hurt");
-        float side = Mathf.Sign(posicionEnemigoX - transform.position.x);
+        textoVidas.text = (--vidas).ToString();
+        if (vidas==0)
+        {
+            m_animator.SetTrigger("Death");
+            gameOver();
+        }
+        else
+        {
+            herido = true;
+            //PRIMERO RESTO EN VIDAS Y DESPUÉS LO PASO A STRING
+            //textoVidas.text = (--vidas).ToString();
+
+            m_animator.SetTrigger("Hurt");
+            float side = Mathf.Sign(posicionEnemigoX - transform.position.x);
 
 
-        //añadir impulso
-        m_body2d.AddForce(Vector2.left*side*5f,ForceMode2D.Impulse);
+            //añadir impulso
+            m_body2d.AddForce(Vector2.left * side * 5f, ForceMode2D.Impulse);
 
-        jump();
-        Invoke("trapa", 1f);
-
+            jump();
+            Invoke("trapa", 1f);
+        }
         
+
+                
 
         //RESTAR VIDA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         
     }
 
+    public void gameOver()
+    {
+        SceneManager.LoadScene("Episode-1");
+    }
+
     public void trapa()
     {
         herido = false;
-    }
-
-
-    //metodo para colisiones con enemigos---------------------------------
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Enemy")
-        {
-            //UpdateState();
-            //PARA EL REINICO
-            game.GetComponent<GameController>().gameState = GameController.GameState.Ended;
-        }
     }
 
 

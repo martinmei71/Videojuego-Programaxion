@@ -70,6 +70,8 @@ public class ControladorColoso : MonoBehaviour
     {
         estado.SetTrigger("muerto");
         speed = 0f;
+        gameObject.layer = 10;
+
         Invoke("DestruirObjeto", 2);
 
         
