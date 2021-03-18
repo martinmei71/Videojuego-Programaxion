@@ -152,15 +152,16 @@ public class HeroKnight : MonoBehaviour {
 
     public void Golpeado(float posicionEnemigoX)
     {
-        bool herido = true;
+        herido = true;
         m_animator.SetTrigger("Hurt");
         float side = Mathf.Sign(posicionEnemigoX - transform.position.x);
 
 
         //añadir impulso
-        m_body2d.AddForce(Vector2.left*side*30f,ForceMode2D.Impulse);
+        m_body2d.AddForce(Vector2.left*side*5f,ForceMode2D.Impulse);
+
         jump();
-        Invoke("trapa", 1);
+        Invoke("trapa", 1f);
 
         
 
@@ -172,6 +173,8 @@ public class HeroKnight : MonoBehaviour {
     {
         herido = false;
     }
+
+
     //metodo para colisiones con enemigos---------------------------------
     private void OnTriggerEnter2D(Collider2D collision)
     {
