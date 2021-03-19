@@ -25,6 +25,7 @@ public class HeroKnight : MonoBehaviour {
 
     private float               m_delayToIdle = 0.0f;
 
+    //CONTADOR VIDAS
     public Text textoVidas;
     private int vidas = 3;
 
@@ -97,10 +98,6 @@ public class HeroKnight : MonoBehaviour {
           
             m_animator.SetTrigger("Death");
         }
-        //HERIDA---------------------------------------------------------------------
-        //Hurt
-        else if (Input.GetKeyDown("q"))
-            m_animator.SetTrigger("Hurt");
 
 
 
@@ -144,6 +141,7 @@ public class HeroKnight : MonoBehaviour {
         }
     }
 
+    //MÉTODO SALTAR
     public void jump()
     {
         m_animator.SetTrigger("Jump");
@@ -157,6 +155,7 @@ public class HeroKnight : MonoBehaviour {
 
     public void Golpeado(float posicionEnemigoX)
     {
+        //PRIMERO RESTO EN VIDAS Y DESPUÉS LO PASO A STRING
         textoVidas.text = (--vidas).ToString();
         if (vidas==0)
         {
@@ -166,8 +165,6 @@ public class HeroKnight : MonoBehaviour {
         else
         {
             herido = true;
-            //PRIMERO RESTO EN VIDAS Y DESPUÉS LO PASO A STRING
-            //textoVidas.text = (--vidas).ToString();
 
             m_animator.SetTrigger("Hurt");
             float side = Mathf.Sign(posicionEnemigoX - transform.position.x);
@@ -179,19 +176,17 @@ public class HeroKnight : MonoBehaviour {
             jump();
             Invoke("trapa", 1f);
         }
-        
-
-                
-
-        //RESTAR VIDA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+      
         
     }
 
+    //VUELVE AL PRINCIPIO DEL JUEGO
     public void gameOver()
     {
         SceneManager.LoadScene("Episode-1");
     }
 
+    //MÉTODO PARA HACER HERIDO FALSE
     public void trapa()
     {
         herido = false;
