@@ -24,12 +24,16 @@ public class HeroKnight : MonoBehaviour {
    
 
     private float               m_delayToIdle = 0.0f;
+    private float inputX;
+
 
     //CONTADOR VIDAS
     public Text textoVidas;
     private int vidas = 3;
 
 
+    
+    
     // Use this for initialization
     void Start ()
     {
@@ -63,81 +67,97 @@ public class HeroKnight : MonoBehaviour {
         }
 
         // -- Handle input and movement --
-        float inputX = Input.GetAxis("Horizontal");
-
-        // Swap direction of sprite depending on walk direction
-        if (inputX > 0)
+        if (!m_animator.GetCurrentAnimatorStateInfo(0).IsName("Death"))
         {
-            transform.localScale = new Vector3(0.3642007f, 0.3642007f, 0.3642007f);
-            // m_facingDirection = 1;
-        }
-            
-        else if (inputX < 0)
-        {
-            transform.localScale = new Vector3(-0.3642007f, 0.3642007f, 0.3642007f);
-            //m_facingDirection = -1;
-        }
-
-        // Move
-        if (!herido)
-        {
-            m_body2d.velocity = new Vector2(inputX * m_speed, m_body2d.velocity.y);
-
-        }
-
-        //Set AirSpeed in animator
-        m_animator.SetFloat("AirSpeedY", m_body2d.velocity.y);
-
-       
+            inputX = Input.GetAxis("Horizontal");
 
 
-        //MUERTE---------------------------------------------------------------------
-        //Death
-        if (Input.GetKeyDown("r"))
-        {
-          
-            m_animator.SetTrigger("Death");
-        }
+            // Swap direction of sprite depending on walk direction
+            if (inputX > 0)
+            {
+                transform.localScale = new Vector3(0.3642007f, 0.3642007f, 0.3642007f);
+                // m_facingDirection = 1;
+            }
+
+            else if (inputX < 0)
+            {
+                transform.localScale = new Vector3(-0.3642007f, 0.3642007f, 0.3642007f);
+                //m_facingDirection = -1;
+            }
+
+            // Move
+            if (!herido)
+            {
+                m_body2d.velocity = new Vector2(inputX * m_speed, m_body2d.velocity.y);
+
+            }
+
+            //Set AirSpeed in animator
+            m_animator.SetFloat("AirSpeedY", m_body2d.velocity.y);
 
 
 
 
-        //Attack
-        //TIEMPO QUE TARDA EN ATACAR 0.4
-        else if ((Input.GetKeyDown("up") || Input.GetKeyDown("e")) && m_timeSinceAttack > 0.40f)
-        {
+            //MUERTE---------------------------------------------------------------------
+            //Death
+            if (Input.GetKeyDown("r"))
+            {
 
-            m_currentAttack = 1;
-
-            // Call attack animations "Attack1"
-            m_animator.SetTrigger("Attack" + m_currentAttack);
-
-            // Reset timer
-            m_timeSinceAttack = 0.0f;
-        }
+                m_animator.SetTrigger("Death");
+            }
 
 
-        //Jump
-        else if ((Input.GetKeyDown("space") || Input.GetKeyDown("w")) && m_grounded)
-        {
-            jump();
-        }
 
-        //Run
-        else if (Mathf.Abs(inputX) > Mathf.Epsilon)
-        {
-            // Reset timer
-            m_delayToIdle = 0.05f;
-            m_animator.SetInteger("AnimState", 1);
-        }
 
-        //Idle
-        else
-        {
-            // Prevents flickering transitions to idle
-            m_delayToIdle -= Time.deltaTime;
-                if(m_delayToIdle < 0)
+            //Attack
+            //TIEMPO QUE TARDA EN ATACAR 0.4
+            else if ((Input.GetKeyDown("up") || Input.GetKeyDown("e")) && m_timeSinceAttack > 0.40f)
+            {
+
+                m_currentAttack = 1;
+
+                // Call attack animations "Attack1"
+                m_animator.SetTrigger("Attack" + m_currentAttack);
+
+                // Reset timer
+                m_timeSinceAttack = 0.0f;
+            }
+
+
+            //Jump
+            else if ((Input.GetKeyDown("space") || Input.GetKeyDown("w")) && m_grounded)
+            {
+                jump();
+            }
+
+            //Run
+            else if (Mathf.Abs(inputX) > Mathf.Epsilon)
+            {
+                // Reset timer
+                m_delayToIdle = 0.05f;
+                m_animator.SetInteger("AnimState", 1);
+            }
+
+            //Idle
+            else
+            {
+                // Prevents flickering transitions to idle
+                m_delayToIdle -= Time.deltaTime;
+                if (m_delayToIdle < 0)
                     m_animator.SetInteger("AnimState", 0);
+            }
+        }
+    }
+
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == ("Fruta"))
+
+        {
+            textoVidas.text = (++vidas).ToString();
+            collision.transform.position = new Vector3(0f, 0f, -1f);
+            Destroy(collision);
         }
     }
 
@@ -160,7 +180,7 @@ public class HeroKnight : MonoBehaviour {
         if (vidas==0)
         {
             m_animator.SetTrigger("Death");
-            gameOver();
+            Invoke ("GameOver" , 4f);
         }
         else
         {
@@ -181,7 +201,7 @@ public class HeroKnight : MonoBehaviour {
     }
 
     //VUELVE AL PRINCIPIO DEL JUEGO
-    public void gameOver()
+    public void GameOver()
     {
         SceneManager.LoadScene("Episode-1");
     }
@@ -192,5 +212,6 @@ public class HeroKnight : MonoBehaviour {
         herido = false;
     }
 
+  
 
 }

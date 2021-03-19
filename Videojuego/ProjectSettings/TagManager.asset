@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Jugador
+  - Fruta
   layers:
   - Default
   - TransparentFX
