@@ -1953,7 +1953,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1071495339
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2698,6 +2698,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 6323719953710832613, guid: a4b4a6d32bcb19248a754d6602ffc7e4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6622598920886161135, guid: a4b4a6d32bcb19248a754d6602ffc7e4,
         type: 3}
       propertyPath: m_Layer
@@ -3280,6 +3285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f70e8a944ade794ea9281ce2c5f5ce1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Krakot: {fileID: 0}
 --- !u!61 &1372541883
 BoxCollider2D:
   m_ObjectHideFlags: 0

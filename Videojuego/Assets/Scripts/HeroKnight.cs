@@ -31,9 +31,23 @@ public class HeroKnight : MonoBehaviour {
     public Text textoVidas;
     private int vidas = 3;
     public GameObject enemigos;
+    bool finVida = true;
 
-    
-    
+
+    Scene escena;
+
+    void Awake()
+    {
+        escena=
+        DontDestroyOnLoad(this);
+        print(SceneManager.GetActiveScene().name);
+        if (SceneManager.GetActiveScene().name.Equals("Episode-2"))
+        {
+            this.transform.position = new Vector3(-1.53f, -1.427f, 0f);
+            print("Estoy en el episodio 2");
+        }
+    }
+
     // Use this for initialization
     void Start ()
     {
@@ -42,7 +56,9 @@ public class HeroKnight : MonoBehaviour {
         
         //SIRVE PARA DETECTAR EL ESTADO DEL PERSONAJE Y DARLE MOVIMIENTO
         m_groundSensor = transform.Find("GroundSensor").GetComponent<Sensor_HeroKnight>();
-       
+
+        textoVidas.text = vidas.ToString(); 
+
     }
 
     // Update is called once per frame
@@ -148,10 +164,13 @@ public class HeroKnight : MonoBehaviour {
             }
         }
 
-        if(enemigos.transform.childCount == 0) // comprueba si ya no quedan enemigos 
+        
+        if (enemigos.transform.childCount == 0 && finVida) // comprueba si ya no quedan enemigos 
         {
             textoVidas.text = (++vidas).ToString();  // suma una vida
+            finVida = false;
         }
+
     }
 
 

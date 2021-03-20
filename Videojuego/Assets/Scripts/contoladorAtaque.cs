@@ -29,6 +29,7 @@ public class contoladorAtaque : MonoBehaviour
                 collision.SendMessage("Muerto");
 
 
+               
             }
         }
     }
