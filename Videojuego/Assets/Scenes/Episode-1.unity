@@ -967,6 +967,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f70e8a944ade794ea9281ce2c5f5ce1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Krakot: {fileID: 337845698}
 --- !u!61 &590903134
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39852,6 +39853,11 @@ PrefabInstance:
       propertyPath: m_speed
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 9043920546160527475, guid: a4b4a6d32bcb19248a754d6602ffc7e4,
+        type: 3}
+      propertyPath: enemigos
+      value: 
+      objectReference: {fileID: 834886004}
     - target: {fileID: 9043920546160527475, guid: a4b4a6d32bcb19248a754d6602ffc7e4,
         type: 3}
       propertyPath: m_noBlood

@@ -32,8 +32,8 @@ public class pasarNivel : MonoBehaviour
     {
         if(enemigos.transform.childCount == 0)
         {
-            //heroe.SendMessage ("SumaVida");
-            SceneManager.LoadScene("Scenes/Episode-2");
+           
+          //  SceneManager.LoadScene("Scenes/Episode-2");
         } 
     }
 }

@@ -30,7 +30,7 @@ public class HeroKnight : MonoBehaviour {
     //CONTADOR VIDAS
     public Text textoVidas;
     private int vidas = 3;
-
+    public GameObject enemigos;
 
     
     
@@ -146,6 +146,11 @@ public class HeroKnight : MonoBehaviour {
                 if (m_delayToIdle < 0)
                     m_animator.SetInteger("AnimState", 0);
             }
+        }
+
+        if(enemigos.transform.childCount == 0) // comprueba si ya no quedan enemigos 
+        {
+            textoVidas.text = (++vidas).ToString();  // suma una vida
         }
     }
 
