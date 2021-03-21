@@ -176,12 +176,12 @@ public class HeroKnight : MonoBehaviour {
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == ("Fruta"))
+        if (collision.tag == ("Fruta")) // si colisiona con la fruta
 
         {
-            textoVidas.text = (++vidas).ToString();
-            collision.transform.position = new Vector3(0f, 0f, -1f);
-            Destroy(collision);
+            textoVidas.text = (++vidas).ToString();  // suma una vida
+            collision.transform.position = new Vector3(0f, 0f, -1f); // cambia de capa el objeto
+            Destroy(collision); // deshabilita  la colisión
         }
     }
 
