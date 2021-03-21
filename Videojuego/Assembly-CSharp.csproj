@@ -77,6 +77,8 @@
     <Compile Include="Assets\Scripts\Sensor_HeroKnight.cs" />
     <Compile Include="Assets\Scripts\contoladorAtaque.cs" />
     <Compile Include="Assets\VolverAlMenu.cs" />
+    <Compile Include="Assets\almacenarVidas.cs" />
+    <Compile Include="Assets\finalJuego.cs" />
     <Compile Include="Assets\pasarNivel.cs" />
     <None Include="Assets\Pixel2DCastleTileset\about.txt" />
     <None Include="Assets\Hero and Opponents\license.txt" />

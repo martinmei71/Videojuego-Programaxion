@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 35029961}
   - component: {fileID: 35029960}
   - component: {fileID: 35029959}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Main Camera
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -311,7 +311,7 @@ GameObject:
   m_Component:
   - component: {fileID: 53146098}
   - component: {fileID: 53146099}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -531,10 +531,20 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.019
       objectReference: {fileID: 0}
+    - target: {fileID: 7881915826190748479, guid: 722a0ace28f88ca439f295ccc745f05e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 7881915827193486267, guid: 722a0ace28f88ca439f295ccc745f05e,
         type: 3}
       propertyPath: m_Name
       value: Coloso1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7881915827193486267, guid: 722a0ace28f88ca439f295ccc745f05e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7881915827193486271, guid: 722a0ace28f88ca439f295ccc745f05e,
         type: 3}
@@ -724,7 +734,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 3
+  m_Text: 
 --- !u!222 &327900934
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1872,10 +1882,20 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.04
       objectReference: {fileID: 0}
+    - target: {fileID: 7881915826190748479, guid: 722a0ace28f88ca439f295ccc745f05e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 7881915827193486267, guid: 722a0ace28f88ca439f295ccc745f05e,
         type: 3}
       propertyPath: m_Name
       value: Coloso4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7881915827193486267, guid: 722a0ace28f88ca439f295ccc745f05e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7881915827193486271, guid: 722a0ace28f88ca439f295ccc745f05e,
         type: 3}
@@ -1953,7 +1973,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1071495339
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1968,6 +1988,7 @@ RectTransform:
   - {fileID: 1461907679}
   - {fileID: 327900935}
   - {fileID: 448084740}
+  - {fileID: 1142869527}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2048,6 +2069,84 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65b0ec3b1a7834044bfb4fa177c85b01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1142869524
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1142869527}
+  - component: {fileID: 1142869526}
+  - component: {fileID: 1142869525}
+  m_Layer: 10
+  m_Name: GameOver
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1142869525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142869524}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: d1fe0bc1ac9782f4c8f875e1a7cea6d7, type: 3}
+    m_FontSize: 42
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 250
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Game Over
+--- !u!222 &1142869526
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142869524}
+  m_CullTransparentMesh: 0
+--- !u!224 &1142869527
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142869524}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1071495339}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 320, y: 60}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1142989981
 GameObject:
   m_ObjectHideFlags: 0
@@ -2141,10 +2240,20 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 2.36
       objectReference: {fileID: 0}
+    - target: {fileID: 7881915826190748479, guid: 722a0ace28f88ca439f295ccc745f05e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 7881915827193486267, guid: 722a0ace28f88ca439f295ccc745f05e,
         type: 3}
       propertyPath: m_Name
       value: Coloso9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7881915827193486267, guid: 722a0ace28f88ca439f295ccc745f05e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7881915827193486271, guid: 722a0ace28f88ca439f295ccc745f05e,
         type: 3}
@@ -2215,10 +2324,20 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -5.85
       objectReference: {fileID: 0}
+    - target: {fileID: 7881915826190748479, guid: 722a0ace28f88ca439f295ccc745f05e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 7881915827193486267, guid: 722a0ace28f88ca439f295ccc745f05e,
         type: 3}
       propertyPath: m_Name
       value: Coloso8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7881915827193486267, guid: 722a0ace28f88ca439f295ccc745f05e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7881915827193486271, guid: 722a0ace28f88ca439f295ccc745f05e,
         type: 3}
@@ -2370,10 +2489,20 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 5.67
       objectReference: {fileID: 0}
+    - target: {fileID: 7881915826190748479, guid: 722a0ace28f88ca439f295ccc745f05e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 7881915827193486267, guid: 722a0ace28f88ca439f295ccc745f05e,
         type: 3}
       propertyPath: m_Name
       value: Coloso7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7881915827193486267, guid: 722a0ace28f88ca439f295ccc745f05e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7881915827193486271, guid: 722a0ace28f88ca439f295ccc745f05e,
         type: 3}
@@ -2676,7 +2805,7 @@ PrefabInstance:
     - target: {fileID: 111755813442870902, guid: a4b4a6d32bcb19248a754d6602ffc7e4,
         type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 2655505060201611074, guid: a4b4a6d32bcb19248a754d6602ffc7e4,
         type: 3}
@@ -2696,27 +2825,27 @@ PrefabInstance:
     - target: {fileID: 6323719953710832613, guid: a4b4a6d32bcb19248a754d6602ffc7e4,
         type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 6323719953710832613, guid: a4b4a6d32bcb19248a754d6602ffc7e4,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6622598920886161135, guid: a4b4a6d32bcb19248a754d6602ffc7e4,
         type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7087049454815086010, guid: a4b4a6d32bcb19248a754d6602ffc7e4,
         type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7967423529762950208, guid: a4b4a6d32bcb19248a754d6602ffc7e4,
         type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8413529789942519730, guid: a4b4a6d32bcb19248a754d6602ffc7e4,
         type: 3}
@@ -2791,18 +2920,23 @@ PrefabInstance:
     - target: {fileID: 8631832243428726876, guid: a4b4a6d32bcb19248a754d6602ffc7e4,
         type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 9013660374251658338, guid: a4b4a6d32bcb19248a754d6602ffc7e4,
         type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 9043920546160527475, guid: a4b4a6d32bcb19248a754d6602ffc7e4,
         type: 3}
       propertyPath: m_speed
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 9043920546160527475, guid: a4b4a6d32bcb19248a754d6602ffc7e4,
+        type: 3}
+      propertyPath: enemigos
+      value: 
+      objectReference: {fileID: 1924336586}
     - target: {fileID: 9043920546160527475, guid: a4b4a6d32bcb19248a754d6602ffc7e4,
         type: 3}
       propertyPath: m_noBlood
@@ -2823,6 +2957,11 @@ PrefabInstance:
       propertyPath: m_rollForce
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 9043920546160527475, guid: a4b4a6d32bcb19248a754d6602ffc7e4,
+        type: 3}
+      propertyPath: textoGameOver
+      value: 
+      objectReference: {fileID: 1142869525}
     - target: {fileID: 9117128348835321587, guid: a4b4a6d32bcb19248a754d6602ffc7e4,
         type: 3}
       propertyPath: m_Enabled
@@ -3282,10 +3421,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1372541879}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f70e8a944ade794ea9281ce2c5f5ce1, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b5a8aa95b35e1e45b99aef3737c52fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Krakot: {fileID: 0}
+  enemigos: {fileID: 1924336586}
 --- !u!61 &1372541883
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -70334,7 +70473,7 @@ GameObject:
   - component: {fileID: 1578122702}
   - component: {fileID: 1578122704}
   - component: {fileID: 1578122703}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Zarok
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -70675,10 +70814,20 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 3.565
       objectReference: {fileID: 0}
+    - target: {fileID: 7881915826190748479, guid: 722a0ace28f88ca439f295ccc745f05e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 7881915827193486267, guid: 722a0ace28f88ca439f295ccc745f05e,
         type: 3}
       propertyPath: m_Name
       value: Coloso6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7881915827193486267, guid: 722a0ace28f88ca439f295ccc745f05e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7881915827193486271, guid: 722a0ace28f88ca439f295ccc745f05e,
         type: 3}
@@ -71353,10 +71502,20 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.05
       objectReference: {fileID: 0}
+    - target: {fileID: 7881915826190748479, guid: 722a0ace28f88ca439f295ccc745f05e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 7881915827193486267, guid: 722a0ace28f88ca439f295ccc745f05e,
         type: 3}
       propertyPath: m_Name
       value: Coloso5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7881915827193486267, guid: 722a0ace28f88ca439f295ccc745f05e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7881915827193486271, guid: 722a0ace28f88ca439f295ccc745f05e,
         type: 3}
@@ -71430,7 +71589,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1924336587}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemies
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71637,10 +71796,20 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 2.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7881915826190748479, guid: 722a0ace28f88ca439f295ccc745f05e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 7881915827193486267, guid: 722a0ace28f88ca439f295ccc745f05e,
         type: 3}
       propertyPath: m_Name
       value: Coloso3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7881915827193486267, guid: 722a0ace28f88ca439f295ccc745f05e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7881915827193486271, guid: 722a0ace28f88ca439f295ccc745f05e,
         type: 3}
@@ -71761,10 +71930,20 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -2.02
       objectReference: {fileID: 0}
+    - target: {fileID: 7881915826190748479, guid: 722a0ace28f88ca439f295ccc745f05e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 7881915827193486267, guid: 722a0ace28f88ca439f295ccc745f05e,
         type: 3}
       propertyPath: m_Name
       value: Coloso10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7881915827193486267, guid: 722a0ace28f88ca439f295ccc745f05e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7881915827193486271, guid: 722a0ace28f88ca439f295ccc745f05e,
         type: 3}
@@ -71840,10 +72019,20 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.01
       objectReference: {fileID: 0}
+    - target: {fileID: 7881915826190748479, guid: 722a0ace28f88ca439f295ccc745f05e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 7881915827193486267, guid: 722a0ace28f88ca439f295ccc745f05e,
         type: 3}
       propertyPath: m_Name
       value: Coloso2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7881915827193486267, guid: 722a0ace28f88ca439f295ccc745f05e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7881915827193486271, guid: 722a0ace28f88ca439f295ccc745f05e,
         type: 3}
@@ -72007,10 +72196,20 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0.71
       objectReference: {fileID: 0}
+    - target: {fileID: 7881915826190748479, guid: 722a0ace28f88ca439f295ccc745f05e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 7881915827193486267, guid: 722a0ace28f88ca439f295ccc745f05e,
         type: 3}
       propertyPath: m_Name
       value: Coloso11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7881915827193486267, guid: 722a0ace28f88ca439f295ccc745f05e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7881915827193486271, guid: 722a0ace28f88ca439f295ccc745f05e,
         type: 3}

@@ -71,7 +71,7 @@ public class ControladorKrakot : MonoBehaviour
 
     }
 
-    void OnTriggerEnter2D(Collider2D col)   //HAY QUE MODIFICAR, 2 triggers difrentes ataque y cuerpo 
+    void OnTriggerEnter2D(Collider2D col)   
     {
         if (col.gameObject.tag == "Player")
         {

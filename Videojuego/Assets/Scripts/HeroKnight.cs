@@ -18,7 +18,7 @@ public class HeroKnight : MonoBehaviour {
     private bool                m_grounded = false;
     bool herido = false;
 
-    private int                 m_facingDirection = 1;
+    //private int                 m_facingDirection = 1;
     private int                 m_currentAttack = 0;
     private float               m_timeSinceAttack = 0.0f;
    
@@ -29,28 +29,29 @@ public class HeroKnight : MonoBehaviour {
 
     //CONTADOR VIDAS
     public Text textoVidas;
-    private int vidas = 3;
+    private int vidas;
     public GameObject enemigos;
     bool finVida = true;
+    private GameObject almacenVidas;
+    private Text vidasIniciales;
 
+    public Text textoGameOver;
 
-    Scene escena;
+    //Scene escena;
 
-    void Awake()
-    {
-        escena=
-        DontDestroyOnLoad(this);
-        print(SceneManager.GetActiveScene().name);
-        if (SceneManager.GetActiveScene().name.Equals("Episode-2"))
-        {
-            this.transform.position = new Vector3(-1.53f, -1.427f, 0f);
-            print("Estoy en el episodio 2");
-        }
-    }
+    
 
     // Use this for initialization
     void Start ()
     {
+        almacenVidas = GameObject.FindGameObjectWithTag("AlmacenVidas");
+        vidasIniciales = almacenVidas.GetComponent<Text>();
+        textoVidas.text = vidasIniciales.text;
+        vidas = int.Parse(textoVidas.text);
+
+
+
+
         m_animator = GetComponent<Animator>();
         m_body2d = GetComponent<Rigidbody2D>();
         
@@ -171,6 +172,8 @@ public class HeroKnight : MonoBehaviour {
             finVida = false;
         }
 
+        if (almacenVidas != null) vidasIniciales.text = vidas.ToString();
+
     }
 
 
@@ -201,9 +204,13 @@ public class HeroKnight : MonoBehaviour {
     {
         //PRIMERO RESTO EN VIDAS Y DESPUÉS LO PASO A STRING
         textoVidas.text = (--vidas).ToString();
-        if (vidas==0)
+        if (vidas<=0)
         {
             m_animator.SetTrigger("Death");
+            m_body2d.velocity = new Vector2(0f, 0f);        // cambia la velocidad a 0
+            gameObject.layer = 10;                         // desactiva colisiones (layer "noColision")
+            Destroy(almacenVidas);
+            textoGameOver.enabled = true;
             Invoke ("GameOver" , 4f);
         }
         else
@@ -215,10 +222,10 @@ public class HeroKnight : MonoBehaviour {
 
 
             //añadir impulso
-            m_body2d.AddForce(Vector2.left * side * 5f, ForceMode2D.Impulse);
+            m_body2d.AddForce(Vector2.left * side * m_jumpForce/2, ForceMode2D.Impulse);
 
             jump();
-            Invoke("trapa", 1f);
+            Invoke("Curarse", 1f);
         }
       
         
@@ -227,11 +234,11 @@ public class HeroKnight : MonoBehaviour {
     //VUELVE AL PRINCIPIO DEL JUEGO
     public void GameOver()
     {
-        SceneManager.LoadScene("Episode-1");
+        SceneManager.LoadScene("MainTitle");
     }
 
     //MÉTODO PARA HACER HERIDO FALSE
-    public void trapa()
+    public void Curarse()
     {
         herido = false;
     }
